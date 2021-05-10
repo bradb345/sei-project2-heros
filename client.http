@@ -1,0 +1,23 @@
+GET https://akabab.github.io/superhero-api/api/all.json
+
+###
+
+GET https://akabab.github.io/superhero-api/api/id/1.json
+
+###
+
+GET https://akabab.github.io/superhero-api/api/powerstats
+
+###
+
+GET https://akabab.github.io/superhero-api/api/appearance
+
+### 
+
+GET https://akabab.github.io/superhero-api/api/biography
+
+### 
+GET https://akabab.github.io/superhero-api/api/connections
+
+### 
+GET https://akabab.github.io/superhero-api/api/work
