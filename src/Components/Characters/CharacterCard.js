@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 function CharacterCard({ name, image, id }) {
   return ( 
-    <div className='column is-one-quarter-desktop is-one-third-tablet'>
+    <div className='column is-one-quarter-desktop is-one-third-tablet is-one-half-mobile'>
       <div className='boxContent'>
         <Link to={`/characters/${id}`}>
           <div className='card'>

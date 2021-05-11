@@ -10,7 +10,7 @@
 }
 
 .home {
-  background-image: url('/images/marvel .jpeg');
+  background-image: url('/images/Background/marvel .jpeg');
   background-size: cover ;
   background-position: center;
 }
@@ -90,9 +90,12 @@ margin: 25px;
   div.flex {
     flex-direction: column;
   }
-
-  
-
+  .boxContent {
+    width: 350px;
+    margin: 0 auto;
+  }
 }
+
+
 
 
