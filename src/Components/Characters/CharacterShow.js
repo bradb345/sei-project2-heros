@@ -5,60 +5,61 @@ import { getSingleCharacter } from '../../lib/api'
 
 function CharacterShow() {
   const { characterId } = useParams()
-  const [Character, setCharacter] = React.useState(null)
-
-
-
+  const [character, setCharacter] = React.useState(null)
+  const [isError, setIsError] = React.useState(false)
+  const isLoading = !character && !isError
   React.useEffect(() => {
     const getData = async () => {
-      const res = await getSingleCharacter(characterId)
-      setCharacter(res.data)
+      try {
+        const res = await getSingleCharacter(characterId)
+        setCharacter(res.data)
+      } catch (error) {
+        setIsError(true)
+      }
+      
     }  
     getData()
   }, [characterId])
 
-  
-
   return (
-    <section className="section is-centered">
-      <div className="container is-centered">
-        {Character ? (
+    <section className="section">
+      <div className='container'>
+        {isLoading && <p>...loading</p>}
+        {isError && <p>oh No something went wrong</p>}
+        {character && (
           <div>
-            <div className='column'>
-              <h2 className="title has-text-centered">
-                {Character.name}
-              </h2>
+            <div className='bigD'>
+              <h1 className="characterName">
+                {character.name}
+              </h1>
             </div>
-            <div className='columns is-vcentered'>
-              <div className='columns is-8'>
+            <div className='flex'>
+              <div className=''>
                 <figure>
-                  <img src={Character.images.md} alt={Character.name} />
+                  <img src={character.images.md} alt={character.name} />
                 </figure>
               </div>
-              <div className='column'>
-                <div className="column is-half">
-                  <h4 className="title is-4">
-                  About
+              <div className='text'>
+
+                <h4 className="subheaders">
+                  <strong>About</strong>
+                </h4>
+                <p className='para'>{character.biography.publisher}</p>
+                <p className='para'>Intentions: {character.biography.alignment}</p>
+                <p className='para'>Real name: {character.biography.fullName}</p>
+                <p className='para'>Other names: {character.biography.aliases}</p>
+                <p className='para'>First appearance: {character.biography.firstAppearance}</p>
+                <div className=''>
+                  <h4 className='subheaders'>
+                    <strong>Affiliations</strong>
                   </h4>
-                  <p></p>
-                  <p>{Character.biography.publisher}</p>
-                  <p>Intentions: {Character.biography.alignment}</p>
-                  <p>Real name: {Character.biography.fullName}</p>
-                  <p>Other names: {Character.biography.aliases}</p>
-                  <p>First appearance: {Character.biography.firstAppearance}</p>
-                </div>
-                <div className='column is-half'>
-                  <h4 className='title is-4'>
-                Affiliations
-                  </h4>
-                  <p>{Character.connections.groupAffiliation}</p>
+                  <p className='para'>{character.connections.groupAffiliation}</p>
                 </div>
               </div>
             </div>
           </div>
+        
         )
-          : 
-          <p>...loading</p>
         }
       </div>
     </section>

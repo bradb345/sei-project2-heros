@@ -5,7 +5,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Bangers', cursive;
-  
+  color: white;
   // background-image: url('/images/marvel .jpeg');
 }
 
@@ -26,9 +26,73 @@
 
 input, select {
   margin: 5px;
+  color: grey;
 }
 
 section {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+html {
+background-color: rgb(138, 138, 138);
+}
+
+.control {
+  margin: 5px;
+  
+}
+
+.button{
+  background-color: rgb(194, 194, 194);
+}
+
+.bigD {
+text-align: center;
+margin: 25px;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
   justify-content: center;
 }
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-top:  30px;
+  max-width: 300px;
+  // justify-content: space-around;
+}
+
+.characterName {
+  font-size: 40px;
+}
+
+.subheaders {
+  font-size: 20px;
+}
+
+.para {
+  margin-bottom: 10px;
+}
+
+.boxContent {
+  box-shadow: 5px 10px rgb(92, 92, 92);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px){
+  div.flex {
+    flex-direction: column;
+  }
+
+  
+
+}
+
 

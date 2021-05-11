@@ -1,22 +1,30 @@
 import React from 'react'
-import {  Link } from 'react-router-dom'
 import CharacterCard from './CharacterCard'
-
+import { useHistory } from 'react-router-dom'
 import { getAllCharaters } from '../../lib/api'
 
 function Characters() {
 
-  // const randomIndex = Math.ceil(Math.random() * characters.length - 1)
   const [characters, setCharacters] = React.useState(null)
+
   const [select1, setSelect1] = React.useState('Universe')
   const [select2, setSelect2] = React.useState('Motive')
   const [input, setInput] = React.useState('')
   const [isError, setIsError] = React.useState(false)
   const isLoading = !characters && !isError
+  const history = useHistory()
   
   
 
-
+  const handleClick = () => {
+    const randomIndex = Math.ceil(Math.random() * characters.length - 1)
+    if (characters === null) {
+      return
+    } else {
+      history.push(`/characters/${characters[randomIndex].id}`)
+    }
+      
+  }
 
   React.useEffect(() => {
     const getData = async () => {
@@ -59,9 +67,10 @@ function Characters() {
     <section className='container'>
       <div className='container'>
         <div className='navbar-end'>
+          <input onKeyUp={handleInput} placeholder="Search..." />
           <select onChange={handleSelect1} className='navbar-dropdown-end '>
             <option value='Universe'>Universe</option>
-            <option value='George Lucas'>George Lucas- Lucasfilm</option>
+            <option value='George Lucas'>Lucasfilm</option>
             <option value='Marvel Comics'>Marvel Comics</option>
             <option value='DC Comics'>Dc</option>
             <option value='Shueisha'>Shueisha</option>
@@ -96,15 +105,14 @@ function Characters() {
           </select>
           
           <select onChange={handleSelect2} className='navbar-dropdown-end'>
-            <option value=''>Motive</option>
+            <option value='Motive'>Motive</option>
             <option value='good'>Hero</option>
             <option value='bad'>Villain</option>
             <option value='neutral'>Neutral</option>
           </select>
-          <input onKeyUp={handleInput} placeholder="Search..." />
-          {/* <Link to={`/characters/${randomIndex}`}>
-            <button  className="is-button">Random Character</button>
-          </Link> */}
+          <div className='control'>
+            <button onClick={handleClick}  className="button">Random Character</button>
+          </div>
         </div>
         
         <div className='columns is-multiline'>
