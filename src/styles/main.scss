@@ -1,57 +1,34 @@
+@import '~bulma/bulma.sass';
 
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 * {
   box-sizing: border-box;
+  font-family: 'Bangers', cursive;
+  
+  // background-image: url('/images/marvel .jpeg');
 }
 
-body {
-flex-direction: column;
-display: flex;
-align-items: center;
+.home {
+  background-image: url('/images/marvel .jpeg');
+  background-size: cover ;
+  background-position: center;
 }
 
-#inputContainer {
-  display: flex;
-  flex-direction: column;
-  width: 1095px;
-}
-
-.inputs {
-  flex-direction: row;
-  display: flex;
-}
-
-select, input {
-  height: 40px;
-  font-size: 25px;
-  margin: 2px;
-}
-
-.characterBox {
+.card-header {
+  background-color: rgb(194, 194, 194) ;
+  // border-radius: 0px;
+  padding: 10px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  font-size: 30px;
 }
 
-.characters {
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
+input, select {
+  margin: 5px;
+}
+
+section {
   justify-content: center;
-  width: 1260px;
 }
 
-.characters div {
-  border: 1px solid black;
-  height: 280px;
-  width: 250px;
-  flex-direction: column;
-  display: flex;
-  padding: 10px;
-  margin: 15px;
-}
-
-h3 {
-  padding: 0px;
-  margin: 0;
-} 
