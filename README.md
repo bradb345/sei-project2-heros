@@ -20,8 +20,8 @@ click [here](https://project2-sei55-heros.netlify.app/) to see the deployed site
 - JavaScript
 
 ## Members
-- Bradley Bernard - https://github.com/bradb345
-- Gursham Singh - https://github.com/Gursham2001
+- Bradley Bernard - [Github](https://github.com/bradb345)
+- Gursham Singh - [Github](https://github.com/Gursham2001)
 
 ## Approach
 - We were given a list of resources that had API's that we could choose from. After some time, we decided to use the Superhero-api. Our site would be a hub where you can search all the superheros  and learn more about them.
