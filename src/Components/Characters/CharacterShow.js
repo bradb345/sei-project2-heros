@@ -8,6 +8,7 @@ function CharacterShow() {
   const [character, setCharacter] = React.useState(null)
   const [isError, setIsError] = React.useState(false)
   const isLoading = !character && !isError
+  
   React.useEffect(() => {
     const getData = async () => {
       try {
