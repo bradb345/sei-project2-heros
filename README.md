@@ -218,3 +218,24 @@ Character Index
 
 Character Show
 ![](src/images/ReadMe/CharacterShow.png)
+
+### Wins and Challenges 
+
+#### - Challenges
+
+- I was introduced to Bulma during this project. As it was a new technology to me I was struggling to wrap my head around how it worked. Needless to say I spent a lot of time reading the documentation on it.
+
+#### - Wins
+
+-  The functionality of the filtering.
+- Getting the Random Character button to work. 
+
+
+### Key Learning
+
+- API requests
+- React
+- Bulma
+
+### Future Improvements 
+- I’d like to implement more interactivity some how, maybe add a game to the site or something. 
