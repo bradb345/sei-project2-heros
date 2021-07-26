@@ -6,7 +6,7 @@
 For the second project, we were tasked with creating a React app in, 48 hours, that used an API of our choosing.
 
 ## Deployment
-click [here](https://project2-sei55-heros.netlify.app/) to see the deployed site.
+Click [here](https://project2-sei55-heros.netlify.app/) to see the deployed site.
 
 ## Technologies 
 - React
@@ -24,17 +24,19 @@ click [here](https://project2-sei55-heros.netlify.app/) to see the deployed site
 - Gursham Singh - [Github](https://github.com/Gursham2001)
 
 ## Approach
-- We were given a list of resources that had API's that we could choose from. After some time, we decided to use the Superhero-api. Our site would be a hub where you can search all the superheros  and learn more about them.
+- We were given a list of resources that had API's that we could choose from. After some time, we decided to use the Superhero-api. Our site would be a hub where you can search all the superheros  and learn more about them. 
 
-### layout
-- Firstly, we sketched out a basic wireframe idea of what we wanted the character index page to look like.
+- My Teamate hosted the project session on his machine and I accessed it through live Share. We determined what work needed to be done and chose what we would do freely. 
+
+### Layout
+- Firstly, I sketched out a basic wireframe idea of what we wanted the character index page to look like using Figma.
 
 ![Wireframe](./src/images/ReadMe/Wireframe-1.png)
 Then added another wireframe of what the character show page would roughly look like.
 ![Wireframe](./src/images/ReadMe/Wireframe-2.png)
 
 ### Getting All Characters and Error Handling
-- For the characters, I made a try catch async function that makes a GET request to the API to get all the Characters. after awaiting the request, If the request was successful I set the response data to state, if the request failed I set the isError state to true. If there was no error but the characters state is still null, then that means that isLoading is true. if any of these states and constants are true then a message is conditionally rendered to the page.
+- For the characters, I made a try catch async function that makes a GET request to the API to get all the Characters. After awaiting the request, if the request was successful I set the response data to state, if the request failed I set the isError state to true. If there was no error but the characters state is still null, then that means that isLoading is true. If any of these states and constants are true then a message is conditionally rendered to the page.
 
 ```js
 const [characters, setCharacters] = React.useState(null)
@@ -64,7 +66,7 @@ React.useEffect(() => {
 
 ### Filtering and Mapping.
 
-- We wrote a function that filters and returns characters  based on the values of the two selects and the input typed by a user in the search input. 
+- I wrote a function that filters and returns characters based on the values of the two selects and the input typed by a user in the search input. 
 
 ```js
 const handleSelect1 = (e) => {
@@ -233,9 +235,13 @@ Character Show
 
 ### Key Learning
 
-- API requests
-- React
-- Bulma
+- Making API requests is a big part of how web applications work, and working on this project helped us have a better understanding of this. 
+- Learning React was a treat. Setting state is so much better than using document query selectors. 
+- This was the first time we were introduced to Bulma. It made styling the CSS so much easier. 
 
 ### Future Improvements 
 - I’d like to implement more interactivity some how, maybe add a game to the site or something. 
+
+### Bugs
+
+- In our testing of the app we didnt find any bugs. 
